@@ -11,6 +11,7 @@ const muiTheme = createTheme({
     background: {
       default: "#f5f5f5",
       paper: "#ffffff",
+      header: "#154c79",
     },
   },
   typography: {
