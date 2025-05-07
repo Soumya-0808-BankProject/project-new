@@ -12,7 +12,6 @@ const EMICarousel = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
-  
   const [loanYears, setLoanYears] = useState(20);
   const [loanMonths, setLoanMonths] = useState(0);
 
@@ -21,16 +20,12 @@ const EMICarousel = () => {
 
   const emi =
     loanAmount && interestRate && totalMonths
-      ? (loanAmount *
-          monthlyRate *
-          Math.pow(1 + monthlyRate, totalMonths)) /
+      ? (loanAmount * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) /
         (Math.pow(1 + monthlyRate, totalMonths) - 1)
       : 0;
 
   const totalPayment = emi * totalMonths;
   const totalInterest = totalPayment - loanAmount;
-
-
 
   const handleApply = () => {
     alert(`Application submitted by ${name}, Phone: ${phone}`);
@@ -51,58 +46,60 @@ const EMICarousel = () => {
           <div className="half">
             <h2>EMI Calculator</h2>
             <div className="emi-container">
-      <div className="emi-left">
-        <div className="form-group">
-          <label>Loan Amount (₹)</label>
-          <input
-            type="number"
-            value={loanAmount}
-            onChange={(e) => setLoanAmount(parseFloat(e.target.value))}
-          />
-        </div>
-        <div className="form-group">
-          <label>Interest Rate (%)</label>
-          <input
-            type="number"
-            step="0.1"
-            value={interestRate}
-            onChange={(e) => setInterestRate(parseFloat(e.target.value))}
-          />
-        </div>
-        <div className="form-group">
-          <label>Loan Tenure</label>
-          <div className="tenure-row">
-            <input
-              type="number"
-              value={loanYears}
-              onChange={(e) => setLoanYears(parseInt(e.target.value))}
-            />
-            <span>Yr</span>
-            <input
-              type="number"
-              value={loanMonths}
-              onChange={(e) => setLoanMonths(parseInt(e.target.value))}
-            />
-            <span>Mo</span>
-          </div>
-        </div>
-      </div>
+              <div className="emi-left">
+                <div className="form-group">
+                  <label>Loan Amount (₹)</label>
+                  <input
+                    type="number"
+                    value={loanAmount}
+                    onChange={(e) => setLoanAmount(parseFloat(e.target.value))}
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Interest Rate (%)</label>
+                  <input
+                    type="number"
+                    step="0.1"
+                    value={interestRate}
+                    onChange={(e) =>
+                      setInterestRate(parseFloat(e.target.value))
+                    }
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Loan Tenure</label>
+                  <div className="tenure-row">
+                    <input
+                      type="number"
+                      value={loanYears}
+                      onChange={(e) => setLoanYears(parseInt(e.target.value))}
+                    />
+                    <span>Yr</span>
+                    <input
+                      type="number"
+                      value={loanMonths}
+                      onChange={(e) => setLoanMonths(parseInt(e.target.value))}
+                    />
+                    <span>Mo</span>
+                  </div>
+                </div>
+              </div>
 
-      <div className="emi-right">
-        <div className="result-box">
-          <label>Loan EMI</label>
-          <p>₹ {emi ? emi.toFixed(0) : 0}</p>
-        </div>
-        <div className="result-box">
-          <label>Total Interest Payable</label>
-          <p>₹ {emi ? totalInterest.toFixed(0) : 0}</p>
-        </div>
-        <div className="result-box">
-          <label>Total (Principal + Interest)</label>
-          <p>₹ {emi ? totalPayment.toFixed(0) : 0}</p>
-        </div>
-      </div>
-    </div>
+              <div className="emi-right">
+                <div className="result-box">
+                  <label>Loan EMI</label>
+                  <p>₹ {emi ? emi.toFixed(0) : 0}</p>
+                </div>
+                <div className="result-box">
+                  <label>Total Interest Payable</label>
+                  <p>₹ {emi ? totalInterest.toFixed(0) : 0}</p>
+                </div>
+                <div className="result-box">
+                  <label>Total (Principal + Interest)</label>
+                  <p>₹ {emi ? totalPayment.toFixed(0) : 0}</p>
+                </div>
+              </div>
+            </div>
             {/* <div className="form-group">
               <label>Loan Amount</label>
               <input
@@ -157,7 +154,8 @@ const EMICarousel = () => {
         <div className="slide">
           <h2>How It Works</h2>
           <p>
-            Enter your loan details to calculate your monthly EMI instantly. Fill out the form to apply online.
+            Enter your loan details to calculate your monthly EMI instantly.
+            Fill out the form to apply online.
           </p>
         </div>
 

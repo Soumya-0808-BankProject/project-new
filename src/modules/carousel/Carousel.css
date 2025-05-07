@@ -6,6 +6,7 @@
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   background-color: #abdbe3;
+  /* background-color: #154c79; */
 }
 
 .slide {
@@ -64,7 +65,7 @@ button:hover {
   font-weight: bold;
 }
 .carousel .slider-wrapper.axis-horizontal .slider .slide {
-    flex-direction: row !important;
+  flex-direction: row !important;
 }
 
 .emi-container {
@@ -80,7 +81,8 @@ button:hover {
   gap: 40px;
 }
 
-.emi-left, .emi-right {
+.emi-left,
+.emi-right {
   flex: 1;
 }
 

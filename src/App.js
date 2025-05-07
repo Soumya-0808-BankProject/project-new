@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import CarouselPage from './Carousel';
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-     
-        <CarouselPage/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
