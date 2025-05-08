@@ -3,6 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./Carousel.css"; // Include your custom styles
 
+
 const EMICarousel = () => {
   const [loanAmount, setLoanAmount] = useState(100000);
   const [interestRate, setInterestRate] = useState(7.5);
@@ -37,14 +38,14 @@ const EMICarousel = () => {
         showThumbs={false}
         showStatus={false}
         infiniteLoop
-        autoPlay={true}
+       // autoPlay={true}
         interval={1000}
         useKeyboardArrows
       >
         {/* Slide 1: EMI Calculator + Form */}
         <div className="slide slide-flex">
-          <div className="half">
-            <h2>EMI Calculator</h2>
+          <div className="half firsthalf">
+            <h3>EMI Calculator</h3>
             <div className="emi-container">
               <div className="emi-left">
                 <div className="form-group">
@@ -128,25 +129,29 @@ const EMICarousel = () => {
             {emi && <p className="emi-result">Estimated EMI: ₹{emi}</p>} */}
           </div>
 
-          <div className="half">
-            <h2>Apply Now</h2>
+          <div className="half secondhalf">''
+            <h4 style={{marginBottom:"5px"}}>Do you want to reach us ! please enter details below and submit<br/> we will get back to you.</h4>
+              <div className="emi-container emi-container1">
             <div className="form-group">
-              <label>Full Name</label>
+              <label>Full Name <span style={{color:'red'}}>*</span></label>
               <input
                 type="text"
                 value={name}
+                placeholder="Full Name"
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
             <div className="form-group">
-              <label>Phone Number</label>
+              <label>Phone Number <span style={{color:'red'}}>*</span></label>
               <input
                 type="text"
                 value={phone}
+                placeholder="Phone Number"
                 onChange={(e) => setPhone(e.target.value)}
               />
             </div>
-            <button onClick={handleApply}>Apply Now</button>
+            <button onClick={handleApply}>Submit</button>
+            </div>
           </div>
         </div>
 
