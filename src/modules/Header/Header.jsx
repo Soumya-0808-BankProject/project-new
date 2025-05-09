@@ -4,17 +4,16 @@ import {
   Toolbar,
   Box,
   IconButton,
-  Button,
   MenuItem,
   useTheme,
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import navLinks from "../../utils/navLinks";
 import MobileDrawer from "./MobileDrawer";
 import { useNavigate } from "react-router-dom";
-import logo from "../../assets/images/logo.jpeg";
+import Logo from "../../components/Logo";
+import CustomButton, { NavLinkBtn } from "../../components/CustomButton";
 
 const Header = () => {
   const theme = useTheme();
@@ -37,7 +36,6 @@ const Header = () => {
   };
 
   const handleNavigate = (path) => {
-    console.log("clicked");
     navigate(path);
     setAnchorEl(null);
   };
@@ -45,13 +43,14 @@ const Header = () => {
   return (
     <>
       <AppBar position="static" color="default">
-        <Toolbar sx={{ width: "100%", justifyContent: "space-between" }}>
+        <Toolbar
+          sx={{ width: "100%", justifyContent: "space-between", padding: 0 }}
+        >
           {/* Desktop Navigation */}
           {!isMobile ? (
             <>
-              <Box component="img" src={logo} alt="Logo" sx={{ height: 40 }} />
-
-              <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+              <Logo />
+              <Box sx={{ display: "flex", alignItems: "center" }}>
                 {navLinks.map((link) =>
                   link.children ? (
                     <Box
@@ -60,19 +59,7 @@ const Header = () => {
                       onMouseLeave={handleDropdownClose}
                       sx={{ position: "relative" }}
                     >
-                      <Button
-                        sx={{
-                          textTransform: "capitalize", // Capitalize the text
-                          "&:hover": {
-                            color: "orange", // Change text color to white on hover
-                            backgroundColor: "transparent", // Change background to orange on hover
-                          },
-                        }}
-                        endIcon={<ExpandMoreIcon />}
-                        color="inherit"
-                      >
-                        {link.label}
-                      </Button>
+                      <NavLinkBtn linkName={link.label} endIcon />
 
                       {/* Attached Dropdown Menu */}
                       {anchorEl && anchorEl.textContent === link.label && (
@@ -101,32 +88,13 @@ const Header = () => {
                       )}
                     </Box>
                   ) : (
-                    <Button
-                      key={link.label}
+                    <NavLinkBtn
+                      linkName={link.label}
                       onClick={() => handleNavigate(link.path)}
-                      sx={{
-                        textTransform: "capitalize", // Capitalize the text
-                        "&:hover": {
-                          color: "orange", // Change text color to white on hover
-                          backgroundColor: "transparent", // Change background to orange on hover
-                        },
-                      }}
-                      color="inherit"
-                    >
-                      {link.label}
-                    </Button>
+                    />
                   )
                 )}
-                <Button
-                  variant="contained"
-                  color="primary"
-                  sx={{
-                    marginLeft: "auto", // Push the Sign Up button to the right
-                    textTransform: "capitalize",
-                  }}
-                >
-                  Social Media Highlights
-                </Button>
+                <CustomButton btnName="Social Media Highlights" />
               </Box>
             </>
           ) : (
@@ -150,26 +118,8 @@ const Header = () => {
               >
                 <MenuIcon />
               </IconButton>
-              <Box
-                component="img"
-                src={logo}
-                alt="Logo"
-                sx={{
-                  height: 80, // Make logo a bit bigger
-                  margin: "0 auto", // Center the logo
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                size="large"
-                sx={{
-                  marginLeft: "auto", // Push the Sign Up button to the right
-                  textTransform: "capitalize",
-                }}
-              >
-                Social Media Highlights
-              </Button>
+              <Logo />
+              <CustomButton btnName="Social Media Highlights" />
             </Box>
           )}
         </Toolbar>

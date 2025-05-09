@@ -1,5 +1,7 @@
-import { Box, Card, CardActionArea, Typography } from "@mui/material";
+import { Box, Card } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { SubLoanDescription, SubLoanTitle } from "./Typography";
+import { TextButton } from "./CustomButton";
 
 const LoanCard = ({ loan }) => {
   const navigate = useNavigate();
@@ -15,23 +17,23 @@ const LoanCard = ({ loan }) => {
         width: "100%",
         transition: "transform 0.2s ease, box-shadow 0.2s ease",
         "&:hover": {
-          transform: "translateY(-4px)",
           boxShadow: 3,
+          cursor: "default",
         },
       }}
     >
-      <CardActionArea
-        disableRipple
+      <Box
+        // disableRipple
         sx={{
           display: "flex",
           flexDirection: "column",
           p: 2,
           height: "100%",
           "&:hover": {
-            backgroundColor: "transparent", // remove grey bg on hover
+            backgroundColor: "white", // remove grey bg on hover
           },
         }}
-        onClick={() => navigate(loan.link)}
+        // onClick={() => navigate(loan.link)}
       >
         <Box
           sx={{
@@ -43,20 +45,8 @@ const LoanCard = ({ loan }) => {
           }}
         >
           <Box sx={{ flex: 1, pr: 2 }}>
-            <Typography
-              variant="subtitle1"
-              fontWeight="bold"
-              sx={{ color: "#003366" }}
-            >
-              {loan.title}
-            </Typography>
-            <Typography
-              variant="body2"
-              color="text.secondary"
-              sx={{ wordWrap: "break-word" }}
-            >
-              {loan.description}
-            </Typography>
+            <SubLoanTitle title={loan.title} />
+            <SubLoanDescription desc={loan.description} />
           </Box>
           <Box sx={{ fontSize: 40, color: "#0d47a1", minWidth: 40 }}>
             {loan.icon}
@@ -64,20 +54,12 @@ const LoanCard = ({ loan }) => {
         </Box>
 
         <Box sx={{ mt: "auto", width: "100%" }}>
-          <Typography
-            variant="body2"
-            sx={{
-              fontWeight: 500,
-              color: "#1565c0",
-              display: "flex",
-              alignItems: "center",
-              gap: 0.5,
-            }}
-          >
-            Get Best Offers →
-          </Typography>
+          <TextButton
+            btnName="Get Best Offers →"
+            onClick={() => navigate(loan.link)}
+          />
         </Box>
-      </CardActionArea>
+      </Box>
     </Card>
   );
 };

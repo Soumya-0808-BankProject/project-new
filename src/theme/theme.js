@@ -3,42 +3,27 @@ import { createTheme } from "@mui/material/styles";
 const muiTheme = createTheme({
   palette: {
     primary: {
-      main: "#154c79", // Cool Cyan Blue
+      main: "#154c79",
+      // main: "#fbc02d ",
     },
     secondary: {
-      main: "#E1F5FE", // Ice Blue
+      main: "#fbc02d ",
     },
     background: {
-      default: "#F0F4F8", // Pale Steel (background color)
-      paper: "#FFFFFF", // White for surfaces/cards
+      default: "#F0F4F8",
+      paper: "#FFFFFF",
     },
     text: {
-      primary: "#1C313A", // Steel Charcoal (text)
-      secondary: "#3E3E3E", // Soft Black (secondary text)
+      primary: "#1C313A",
+      secondary: "#3E3E3E",
+    },
+    custom: {
+      hover: "#fbc02d", // Your custom hover color
+      textBtn: "#1976d2",
     },
   },
   typography: {
-    fontFamily: "Roboto, sans-serif", // Default font family
-    h1: {
-      fontWeight: 600,
-      fontSize: "2.5rem",
-    },
-    h2: {
-      fontWeight: 600,
-      fontSize: "2rem",
-    },
-    h3: {
-      fontWeight: 500,
-      fontSize: "1.75rem",
-    },
-    body1: {
-      fontWeight: 400,
-      fontSize: "1rem",
-    },
-    body2: {
-      fontWeight: 400,
-      fontSize: "0.875rem",
-    },
+    fontFamily: "Roboto, sans-serif",
   },
   components: {
     MuiCard: {
@@ -58,7 +43,7 @@ const muiTheme = createTheme({
           backgroundColor: theme.palette.primary.main,
           color: theme.palette.primary.contrastText,
           "&:hover": {
-            backgroundColor: theme.palette.primary.dark,
+            backgroundColor: theme.palette.custom.hover,
           },
         }),
       },
