@@ -2,9 +2,18 @@ import { createTheme } from "@mui/material/styles";
 
 const muiTheme = createTheme({
   palette: {
+    //     Primary: #673AB7 (Deep Purple)
+
+    // Secondary: #E040FB (Electric Pink)
+
+    // Accent: #00BCD4 (Cyan)
+
+    // Background: #121212 (Dark Mode Base)
+
+    // Text: #E0E0E0 (Light Gray)
     primary: {
-      main: "#154c79",
-      // main: "#fbc02d ",
+      // main: "#154c79",
+      main: "#E040FB  ",
     },
     secondary: {
       main: "#fbc02d ",
@@ -19,7 +28,8 @@ const muiTheme = createTheme({
     },
     custom: {
       hover: "#fbc02d", // Your custom hover color
-      textBtn: "#1976d2",
+      textBtn: "#00BCD4  ",
+      // textBtn: "#A5D6A7 ",
     },
   },
   typography: {

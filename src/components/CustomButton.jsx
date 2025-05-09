@@ -32,7 +32,7 @@ export const TextButton = ({ btnName, onClick }) => {
       sx={{
         fontSize: "12px",
         fontWeight: "bold",
-        color: "#1565c0",
+        color: theme.palette.custom.textBtn,
         display: "flex",
         alignItems: "center",
         gap: 0.5,

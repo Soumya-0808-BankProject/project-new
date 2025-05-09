@@ -4,8 +4,8 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  background-color: #154c79;
   /* background-color: #154c79; */
+  background-color: #e040fb;
 }
 
 .slide {
@@ -23,15 +23,15 @@
 .half {
   width: 48%;
 }
-.firsthalf{
-  background-color:#BCCBC9;
-  padding:20px;
+.firsthalf {
+  background-color: #bccbc9;
+  padding: 20px;
   border-radius: 20px;
 }
-.secondhalf{
-  background-color:#C0CBDF;
+.secondhalf {
+  background-color: #c0cbdf;
   /* //#DFC0C6; */
-  padding:20px;
+  padding: 20px;
   border-radius: 20px;
 }
 
@@ -90,10 +90,10 @@ button:hover {
   background: #fff;
   gap: 40px;
 }
-.emi-container1{
+.emi-container1 {
   display: flex;
   flex-direction: column !important;
-  gap:10px !important;
+  gap: 10px !important;
 }
 
 .emi-left,
