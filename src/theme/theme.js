@@ -4,7 +4,7 @@ const muiTheme = createTheme({
   palette: {
     //     Primary: #673AB7 (Deep Purple)
 
-    // Secondary: #E040FB (Electric Pink)
+    // Secondary:#cc8dd7 (Electric Pink)
 
     // Accent: #00BCD4 (Cyan)
 
@@ -13,10 +13,10 @@ const muiTheme = createTheme({
     // Text: #E0E0E0 (Light Gray)
     primary: {
       // main: "#154c79",
-      main: "#E040FB  ",
+      main: "#89bcae",
     },
     secondary: {
-      main: "#fbc02d ",
+      main: "#fbc02d",
     },
     background: {
       default: "#F0F4F8",
@@ -28,7 +28,10 @@ const muiTheme = createTheme({
     },
     custom: {
       hover: "#fbc02d", // Your custom hover color
-      textBtn: "#00BCD4  ",
+      textBtn:"blue",
+      navLinks:"blue",
+      headerLinks:'#27065e',
+      // textBtn: "#00BCD4  ",
       // textBtn: "#A5D6A7 ",
     },
   },

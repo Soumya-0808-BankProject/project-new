@@ -5,8 +5,9 @@
   overflow: hidden;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   /* background-color: #154c79; */
-  background-color: #e040fb;
+  background-color: 	#89bcae;
 }
+
 
 .slide {
   padding: 20px;
@@ -24,15 +25,27 @@
   width: 48%;
 }
 .firsthalf {
-  background-color: #bccbc9;
+  background-color:#FFDDF4	;
+  /* //#FFB6C1; */
+   /* #bccbc9; */
   padding: 20px;
   border-radius: 20px;
+  background-image: url('../../assets//images/bankcarousel.jfif');
+  background-size: cover;       /* or 'contain' */
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 .secondhalf {
-  background-color: #c0cbdf;
+  /* background-color: #c0cbdf; */
+   /* #c0cbdf; */
   /* //#DFC0C6; */
   padding: 20px;
   border-radius: 20px;
+  background-image: url('../../assets/images/carouselimage1.jpg');
+  background-size: cover;       /* or 'contain' */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .form-group {
@@ -43,9 +56,12 @@
   display: block;
   font-weight: bold;
   margin-bottom: 6px;
-  color: #444;
+  color: black;
 }
-
+.labelbox
+{
+  color:white !important;
+}
 .form-group input {
   width: 100%;
   padding: 8px 10px;
@@ -81,13 +97,13 @@ button:hover {
 .emi-container {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   padding: 30px;
   max-width: 800px;
   /* margin: 40px auto; */
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-  background: #fff;
+  /* background: #fff; */
   gap: 40px;
 }
 .emi-container1 {
@@ -110,7 +126,7 @@ label {
   text-align: left;
   font-weight: 600;
   margin-bottom: 6px;
-  color: #333;
+  color: white;
 }
 
 input {
@@ -119,6 +135,7 @@ input {
   font-size: 14px;
   border: 1px solid #bbb;
   border-radius: 5px;
+   font-family: poppins;
 }
 
 .tenure-row {
@@ -132,12 +149,14 @@ input {
 }
 
 .result-box {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .result-box p {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  color: #007b00;
+  color: hsl(263, 33%, 45%);
   margin: 5px 0 0;
+  text-align: left;
+  
 }

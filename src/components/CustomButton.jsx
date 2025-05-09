@@ -8,7 +8,7 @@ export const NavLinkBtn = ({ linkName, endIcon, onClick }) => {
     <Button
       sx={{
         textTransform: "capitalize", // Capitalize the text
-        color: theme.palette.primary.main,
+        color: theme.palette.custom.navLinks,
         "&:hover": {
           color: theme.palette.custom.hover,
           backgroundColor: "transparent",

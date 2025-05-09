@@ -45,30 +45,38 @@ const EMICarousel = () => {
         {/* Slide 1: EMI Calculator + Form */}
         <div className="slide slide-flex">
           <div className="half firsthalf">
-            <h3>EMI Calculator</h3>
+            <h3 className='labelbox'>EMI Calculator</h3>
             <div className="emi-container">
               <div className="emi-left">
                 <div className="form-group">
-                  <label>Loan Amount (₹)</label>
+                  <label className='labelbox'>Loan Amount (₹)</label>
+                  <div style={{position: 'relative'}}>
+  <span style={{position: 'absolute', left: '4px', top: '50%', transform: 'translateY(-50%)', fontSize: '16px',backgroundColor:'#705A85',color:'white',borderRadius:'2px 6px',padding:'2px 6px'}}>₹</span>
                   <input
                     type="number"
                     value={loanAmount}
                     onChange={(e) => setLoanAmount(parseFloat(e.target.value))}
+                    style={{paddingLeft: '28px'}}
                   />
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label>Interest Rate (%)</label>
+                  <label className='labelbox'>Interest Rate (%)</label>
+                    <div style={{position: 'relative'}}>
+  <span style={{position: 'absolute', left: '4px', top: '50%', transform: 'translateY(-50%)', fontSize: '16px',backgroundColor:'#705A85',color:'white',borderRadius:'2px 6px',padding:'2px 6px'}}>%</span>
                   <input
                     type="number"
                     step="0.1"
                     value={interestRate}
+                    style={{paddingLeft: '30px'}}
                     onChange={(e) =>
                       setInterestRate(parseFloat(e.target.value))
                     }
                   />
+                  </div>
                 </div>
                 <div className="form-group">
-                  <label>Loan Tenure</label>
+                  <label className='labelbox'>Loan Tenure</label>
                   <div className="tenure-row">
                     <input
                       type="number"
@@ -129,7 +137,7 @@ const EMICarousel = () => {
             {emi && <p className="emi-result">Estimated EMI: ₹{emi}</p>} */}
           </div>
 
-          <div className="half secondhalf">''
+          <div className="half secondhalf">
             <h4 style={{marginBottom:"5px"}}>Do you want to reach us ! please enter details below and submit<br/> we will get back to you.</h4>
               <div className="emi-container emi-container1">
             <div className="form-group">

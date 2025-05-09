@@ -3,7 +3,7 @@
 const contactHeaderStyles = {
   container: (theme) => ({
     backgroundColor: theme.palette.primary.main,
-    color: "white",
+    color: theme.palette.custom.headerLinks,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
