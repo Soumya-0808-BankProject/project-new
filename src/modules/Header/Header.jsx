@@ -80,6 +80,7 @@ const Header = () => {
                             <MenuItem
                               key={child.label}
                               onClick={() => handleNavigate(child.path)}
+                              sx={{ fontSize: "0.875rem" }}
                             >
                               {child.label}
                             </MenuItem>
