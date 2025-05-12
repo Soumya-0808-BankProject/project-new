@@ -40,6 +40,10 @@ const Header = () => {
     setAnchorEl(null);
   };
 
+  const handleNavigateSocialMedia=()=>{
+    navigate("/social-media")
+  }
+
   return (
     <>
       <AppBar position="static" color="default">
@@ -95,7 +99,7 @@ const Header = () => {
                     />
                   )
                 )}
-                <CustomButton btnName="Social Media Highlights" />
+                <CustomButton onClick={handleNavigateSocialMedia} btnName="Social Media Highlights" />
               </Box>
             </>
           ) : (

@@ -63,6 +63,7 @@ const CustomButton = ({ btnName, onClick }) => {
         marginLeft: "auto",
         textTransform: "capitalize",
       }}
+      onClick={onClick}
     >
       {btnName}
     </Button>

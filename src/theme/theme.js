@@ -13,10 +13,10 @@ const muiTheme = createTheme({
     // Text: #E0E0E0 (Light Gray)
     primary: {
       // main: "#154c79",
-      main: "#89bcae",
+      main: "#2E4053",
     },
     secondary: {
-      main: "#fbc02d",
+      main: "#F7DC6F",
     },
     background: {
       default: "#F0F4F8",
@@ -29,8 +29,8 @@ const muiTheme = createTheme({
     custom: {
       hover: "#fbc02d", // Your custom hover color
       textBtn:"blue",
-      navLinks:"blue",
-      headerLinks:'#27065e',
+      navLinks:"#333333",
+      headerLinks:'#FFF',
       // textBtn: "#00BCD4  ",
       // textBtn: "#A5D6A7 ",
     },
