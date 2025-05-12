@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import FormPage from "../../components/FormPage";
 import "./Carousel.css"; // Include your custom styles
-
 
 const EMICarousel = () => {
   const [loanAmount, setLoanAmount] = useState(100000);
@@ -38,45 +38,75 @@ const EMICarousel = () => {
         showThumbs={false}
         showStatus={false}
         infiniteLoop
-       // autoPlay={true}
+        // autoPlay={true}
         interval={1000}
         useKeyboardArrows
       >
         {/* Slide 1: EMI Calculator + Form */}
         <div className="slide slide-flex">
           <div className="half firsthalf">
-            <h3 className='labelbox'>EMI Calculator</h3>
+            <h3 className="labelbox">EMI Calculator</h3>
             <div className="emi-container">
               <div className="emi-left">
-                <div className="form-group">
-                  <label className='labelbox'>Loan Amount (₹)</label>
-                  <div style={{position: 'relative'}}>
-  <span style={{position: 'absolute', left: '4px', top: '50%', transform: 'translateY(-50%)', fontSize: '16px',backgroundColor:'#705A85',color:'white',borderRadius:'2px 6px',padding:'2px 6px'}}>₹</span>
-                  <input
-                    type="number"
-                    value={loanAmount}
-                    onChange={(e) => setLoanAmount(parseFloat(e.target.value))}
-                    style={{paddingLeft: '28px'}}
-                  />
+                <div className="form-group1">
+                  <label className="labelbox">Loan Amount (₹)</label>
+                  <div style={{ position: "relative" }}>
+                    <span
+                      style={{
+                        position: "absolute",
+                        left: "4px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        fontSize: "16px",
+                        backgroundColor: "#705A85",
+                        color: "white",
+                        borderRadius: "2px 6px",
+                        padding: "2px 6px",
+                      }}
+                    >
+                      ₹
+                    </span>
+                    <input
+                      type="number"
+                      value={loanAmount}
+                      onChange={(e) =>
+                        setLoanAmount(parseFloat(e.target.value))
+                      }
+                      style={{ paddingLeft: "28px" }}
+                    />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label className='labelbox'>Interest Rate (%)</label>
-                    <div style={{position: 'relative'}}>
-  <span style={{position: 'absolute', left: '4px', top: '50%', transform: 'translateY(-50%)', fontSize: '16px',backgroundColor:'#705A85',color:'white',borderRadius:'2px 6px',padding:'2px 6px'}}>%</span>
-                  <input
-                    type="number"
-                    step="0.1"
-                    value={interestRate}
-                    style={{paddingLeft: '30px'}}
-                    onChange={(e) =>
-                      setInterestRate(parseFloat(e.target.value))
-                    }
-                  />
+                <div className="form-group1">
+                  <label className="labelbox">Interest Rate (%)</label>
+                  <div style={{ position: "relative" }}>
+                    <span
+                      style={{
+                        position: "absolute",
+                        left: "4px",
+                        top: "50%",
+                        transform: "translateY(-50%)",
+                        fontSize: "16px",
+                        backgroundColor: "#705A85",
+                        color: "white",
+                        borderRadius: "2px 6px",
+                        padding: "2px 6px",
+                      }}
+                    >
+                      %
+                    </span>
+                    <input
+                      type="number"
+                      step="0.1"
+                      value={interestRate}
+                      style={{ paddingLeft: "30px" }}
+                      onChange={(e) =>
+                        setInterestRate(parseFloat(e.target.value))
+                      }
+                    />
                   </div>
                 </div>
-                <div className="form-group">
-                  <label className='labelbox'>Loan Tenure</label>
+                <div className="form-group1">
+                  <label className="labelbox">Loan Tenure</label>
                   <div className="tenure-row">
                     <input
                       type="number"
@@ -138,28 +168,36 @@ const EMICarousel = () => {
           </div>
 
           <div className="half secondhalf">
-            <h4 style={{marginBottom:"5px"}}>Do you want to reach us ! please enter details below and submit<br/> we will get back to you.</h4>
-              <div className="emi-container emi-container1">
-            <div className="form-group">
-              <label>Full Name <span style={{color:'red'}}>*</span></label>
-              <input
-                type="text"
-                value={name}
-                placeholder="Full Name"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <div className="form-group">
-              <label>Phone Number <span style={{color:'red'}}>*</span></label>
-              <input
-                type="text"
-                value={phone}
-                placeholder="Phone Number"
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-            <button onClick={handleApply}>Submit</button>
-            </div>
+            <h4 style={{ marginBottom: "5px" }}>
+              Do you want to reach us ! please enter details below and submit
+              <br /> we will get back to you.
+            </h4>
+            <FormPage title='' />
+            {/* <div className="emi-container emi-container1">
+              <div className="form-group">
+                <label>
+                  Full Name <span style={{ color: "red" }}>*</span>
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  placeholder="Full Name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="form-group">
+                <label>
+                  Phone Number <span style={{ color: "red" }}>*</span>
+                </label>
+                <input
+                  type="text"
+                  value={phone}
+                  placeholder="Phone Number"
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </div>
+              <button onClick={handleApply}>Submit</button>
+            </div> */}
           </div>
         </div>
 

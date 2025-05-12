@@ -116,9 +116,11 @@ button:hover {
 .emi-right {
   flex: 1;
 }
-
+.form-group1{
+  margin-bottom: 22px;
+}
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 label {
@@ -129,13 +131,18 @@ label {
   color: white;
 }
 
-input {
+input,select {
   width: 100%;
   padding: 8px 10px;
   font-size: 14px;
   border: 1px solid #bbb;
   border-radius: 5px;
    font-family: poppins;
+}
+select::placeholder
+{
+  font-family: poppins;
+  color:gray;
 }
 
 .tenure-row {
@@ -149,7 +156,7 @@ input {
 }
 
 .result-box {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .result-box p {
@@ -159,4 +166,12 @@ input {
   margin: 5px 0 0;
   text-align: left;
   
+}
+.btndisabled,.btndisabled:hover{
+  opacity: 0.7;
+  cursor:not-allowed;
+}
+
+.btnenabled,.btnenabled:hover{
+  cursor: pointer;
 }
